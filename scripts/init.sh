@@ -22,7 +22,8 @@ echo 'source ./lds_start.sh' >> ~/.bashrc
 echo "dongbuict0" | sudo -S cp ./net_config/net_nano_10.yaml /etc/netplan/config.yaml
 echo "dongbuict0" | sudo -S netplan apply
 
-git clone https://github.com/Pyrestone/jetson-fan-ctl ~/jetson-fan-ctl
+cd ~
+git clone https://github.com/Pyrestone/jetson-fan-ctl.git
 cd ~/jetson-fan-ctl
 ./install.sh
 
