@@ -15,3 +15,6 @@ gnome-terminal 추가
 
 import warnings
 warnings.filterwarnings(action='ignore', module='.paramiko.') 추가
+
+: Private Project clone
+git clone https://github.com/cleevrl/left-detection.git
