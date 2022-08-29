@@ -10,13 +10,14 @@ python3 -m pip install docker-compose
 
 echo "dongbuict0" | sudo -S -H pip3 install -U jetson-stats
 
-wget "https://download.nomachine.com/download/7.10/Arm/nomachine_7.10.1_1_arm64.deb" ~/Downloads
-echo "donbguict0" | sudo dpkg -i ~/Downloads/nomachine_7.10.1_1_arm64.deb
+wget "https://download.nomachine.com/download/7.10/Arm/nomachine_7.10.1_1_arm64.deb" ~/Downloads/nomachine.deb
+echo "donbguict0" | sudo dpkg -i ~/Downloads/nomachine.deb
 
 cp ~/.bashrc ~/.bashrc_backup
 echo 'xhost +local:docker' >> ~/.bashrc
 echo 'echo "dongbuict0" | sudo -S chmod 666 /var/run/docker.sock' >> ~/.bashrc
-echo 'cd ~/left-detection/startup source ./lds_start.sh' >> ~/.bashrc
+echo 'cd ~/left-detection/startup' >> ~/.bashrc
+echo 'source ./lds_start.sh' >> ~/.bashrc
 
 cp ./net_config/net_nano_10.yaml /etc/netplan/config.yaml
 echo "dongbuict0" | sudo -S netplan apply
